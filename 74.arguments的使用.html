@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arguments</title>
+    <script>
+        //arguments 的使用  只有函数才有reguments对象 而且是每个函数都有arguments
+        function fn() {
+            // console.log(arguments);//里面包含了所有传过来的实参
+            // console.log(arguments.length);
+            // console.log(arguments[2]);
+            for (i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+        }
+        // fn(1, 2, 3);
+        fn(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        //伪数组  并不是真正意义上的数组
+        //1.具有数组的length 属性
+        //2.按照索引的方式进行储存
+        //3.他没有真正数组的一些方法 pop() push();等
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

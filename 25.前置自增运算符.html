@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自增</title>
+    <script>
+        var num = 1;
+        ++num;
+        console.log(num);
+        var p = 10;
+        console.log(++p + 10);
+
+        var a = 10;
+        ++a;//++a=11,a=11;
+        var b = ++a + 2; //这里的++a是在a=11的基础上再加一然后再加2；
+        console.log(b);
+
+        var c = 10;
+        c++;    //c++的值是11
+        var d = c++ + 2;  //c++先返回原值 再加2
+        console.log(d);//13
+
+        var e = 10;
+        var f = e++ + ++e;//e++ = 10 e = 11       
+        console.log(f); //22
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

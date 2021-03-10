@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单数据类型</title>
+    <script>
+
+
+        var num = 10;//num 数字型
+        var PI = 3.14;//PI 数字型
+        //01.八进制 0 ~ 7 我们程序中数字前面加0 表示八进制
+        var num1 = 010;
+        console.log(num1);
+        var num2 = 012;
+        console.log(num2);
+        //02. 十六进制 0 ~ 9 a ~ f  #ffffff   数字前面加0x 表示十六进制
+        var num3 = 0x9;
+        console.log(num3);
+        var num4 = 0xa;
+        console.log(num4);
+        //03.数字型的最大值
+        console.log(Number.MAX_VALUE);
+        //04.数字型的最小值
+        console.log(Number.MIN_VALUE);
+        //05.数字型的无穷大
+        console.log(Number.MAX_VALUE * 2); //Infinity表示无穷大
+        //06.数字型的无穷小
+        console.log(Number.MIN_VALUE * 2);//-Infinity表示无穷小
+        //07.非数字
+        console.log('pppp' - 100); //NaN表示非数字
+        /*1.Number--数字型，包含 整型值 和浮点型值 ，如21 。0 0.12；  默认值为0
+            例：
+        2.Boolean--布尔值类型，如true false 等价于0 和1            默认值为false
+        3.String-- 字符串类型，如“张三” 注意：JS里面字符串类型都带'' 默认值为""
+        4.Underfined-- var a; 声明了变量a但是没有给值，此时a = underfined  默认值为underfined
+        5.Null-- var a = null; 声明了变量 a 为空值                 默认值为null
+       */
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

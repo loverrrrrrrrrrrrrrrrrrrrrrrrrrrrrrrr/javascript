@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转换字符型</title>
+    <script>
+        //1.把数字型转换为字符串型 变量.toString
+        var num = 10;
+        var str = num.toString();
+        console.log(str);
+        console.log(typeof str);
+
+        //2.我们利用String
+        console.log(String(num));
+
+        //3.利用 + 拼接字符串的方法实现转换效果  隐式转换
+        console.log(num + '');
+
+        var boo = true;
+        console.log(boo + '');
+
+        //把字符串 转换为数字型
+        //1.parseInt(变量)  可以将字符型转换为数值型
+        var age = prompt('请输入您的年龄：');
+        console.log(parseInt(age));
+        console.log(parseInt('3.14'));//3 取整
+        console.log(parseInt('120px'));//120 会去掉这个单位
+        console.log(parseInt('王八蛋'));//NaN
+        //2.parseFloat(变量)
+        console.log(parseFloat('3.14159265374'));
+        console.log(parseFloat('120px'));//120 会去掉这个单位
+        console.log(parseFloat('王八蛋'));//NaN
+        //3.利用Number 变量
+        var stt = '123';
+        console.log(Number(stt));
+        console.log(Number('12'));
+        //4.运用算数运算
+        console.log('12' - 0);//12
+        console.log('123' - '120');
+        console.log('123' + '120');//123120
+
+        //转换为布尔型
+        console.log(Boolean(''));//false
+        console.log(Boolean(0));//false
+        console.log(Boolean(NaN));//false
+        console.log(Boolean(null));//false
+        console.log(Boolean(undefined));//false
+        console.log(Boolean('小白'));//true
+        console.log(Boolean(12));//true
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

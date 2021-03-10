@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        fn();
+        console.log(c);
+        console.log(b);
+        console.log(a);
+        function fn() {
+            var a = b = c = 9;//这里只有a被定义 为局部变量  bc为全局变量
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        //以下操作
+        function fn() {
+            var a;
+            a = b = c = 9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        fn();
+        console.log(c);
+        console.log(b);
+        console.log(a);//报错
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

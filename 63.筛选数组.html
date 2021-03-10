@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>筛选数组</title>
+    <script>
+        //方法1 
+        // var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        // var art = [];
+        // var j = 0;
+        // for (i = 0; i < arr.length; i++) {
+        //     if (arr[i] > 10) {
+        //         art[j] = arr[i];
+        //         j++;
+        //     }
+        // }
+        // console.log(art);
+        //方法2
+        var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var art = [];
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] > 10) {
+                art[art.length] = arr[i];
+                //一开始这个新数组没有值 所以他的长度就为0
+                //art[0]就正好是他的第一个值  高！
+
+            }
+        }
+        console.log(art);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

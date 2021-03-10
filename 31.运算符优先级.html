@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优先级运算符</title>
+    <script>
+        /*  优先级             运算符              顺序
+            1               小括号              ()
+            2               一元运算符          ++ -- ！
+            3               算术运算符          先乘除后+-
+            4               关系运算符          > >= < <=
+            5               相等运算符          == != === !==
+            6               逻辑运算符          先&& 后||
+            7               赋值运算符          =
+            8               逗号运算符          ，
+        */
+        console.log(4 >= 6 || '人' != '阿凡达' && !(12 * 2 == 144) && true);
+        var num = 10;
+        console.log(5 == num / 2 && (2 + 2 * num).toString() === '22');
+        var a = 3 > 5 && 2 < 7 && 3 == 4;
+        console.log(a);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

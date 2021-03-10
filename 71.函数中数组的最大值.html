@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组最大值</title>
+    <script>
+        function getMax(arr) {//arr = [5, 2, 99, 101, 67, 77];
+            var max = 0;
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        //在我们实际开发中  我们通常用一个变量来接收 函数的返回结果 使用更简单
+        var re = getMax([5, 2, 99, 101, 67, 77]);
+        console.log(re);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
