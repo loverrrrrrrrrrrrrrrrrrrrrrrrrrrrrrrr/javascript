@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历</title>
+    <script>
+        //遍历对象
+        var obj = {
+            name: 'pink老师',
+            age: 18,
+            sex: '男'
+        }
+
+        for (var k in obj) {//遍历对象的方法
+            console.log(k); //k 变量 输出 得到的是 属性名
+            console.log(obj[k]); //obj[k] 得到是 属性值
+        }
+        //我们使用 for in 里面的变量 我们一般是用k  或者key
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

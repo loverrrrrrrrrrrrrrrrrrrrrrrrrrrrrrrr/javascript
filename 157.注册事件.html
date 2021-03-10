@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册事件</title>
+</head>
+<button>传统注册事件</button>
+<button>方法监听注册事件</button>
+<button>i9</button>
+
+<body>
+    <script>
+        var btns = document.querySelectorAll('button');
+        //1.传统方式注册事件
+        btns[0].onclick = function () {
+            alert('ho');
+        }
+        btns[0].onclick = function () {
+            alert('dhjgdjyhsgf');
+            //这个函数会覆盖掉上一个函数
+        }
+
+        //2.事件侦听注册事件
+        //监听注册方式
+        // eventTarget.addEventListener(type,listener[,useCapture])
+        //type--事件类型字符串  比如click  mouseover 等 注意这里不要带on
+        //listener--事件处理函数，事件发生时 会调用改监听函数
+        //userCapture--可选值 是一个布尔值 默认是false
+        btns[1].addEventListener('click', function () {
+            alert('22');
+        })
+        btns[1].addEventListener('click', function () {
+            alert('23');
+        })
+        //3.无兼容性问题的注册方式
+        //eventTarget.attachEvent(eventNameWithOn,callback);
+        //i9以前的版本才能适应
+        // btns[2].attachEvent('onclick', function () {
+        //     alert('11');
+        // })
+
+
+
+    </script>
+</body>
+
+</html>

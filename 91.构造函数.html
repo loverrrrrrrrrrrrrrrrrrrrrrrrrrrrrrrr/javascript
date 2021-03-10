@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构造函数</title>
+    <Script>
+        //我们可以用函数的方法 使重复的相同代码 封装起来 我们就把这个函数叫做 构造函数
+        //构造函数  就是我们对象里面的一些相同 的属性 抽象出来 封装到函数里面
+        //我们需要封装四大天王的对象  相同的属性  姓名 年龄 性别   相同的方法  唱歌
+        // function 构造函数名() {
+        //     this.属性 = 值；
+        //     this.方法 = function () {
+        //     }
+        // }
+        // new 构造函数名();
+        function Star(uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function (song) {
+                console.log(song);
+            }
+        }
+        var ldh = new Star('刘德华', 18, '男');//调用函数返回的是一个对象
+        // console.log(typeof ldh);
+        console.log(ldh.name);
+        console.log(ldh['sex']);
+        ldh.sing('冰雨');
+        // console.log(ldh.sing);
+        var zxy = new Star('张学友', 19, '男');
+        console.log(zxy.name);
+        console.log(zxy.age);
+        zxy.sing('李香兰');
+
+        //构造函数的首字母要大写
+        //我们构造函数不需要return 就可以返回结果
+        //我们调用构造函数 必须使用new
+        //我们只要new Star()就可以调用
+        //我们的属性和方法前面必须添加this
+    </Script>
+</head>
+
+<body>
+
+</body>
+
+</html>

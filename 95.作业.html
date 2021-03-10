@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业</title>
+    <script>
+        //1.创建一个电脑对象，该对象要有颜色、重量、品牌、型号，可以看电影、听音乐、打游戏和敲代码
+        var compter = {
+            color: 'black',
+            weight: '1500g',
+            brand: 'dell',
+            model: 'RX750',
+            moive: function () { },
+            music: function () { },
+            game: function () { },
+            code: function () { }
+        }
+        console.log(compter.color);
+        console.log(compter['weight']);
+        console.log(compter.brand);
+        console.log(compter['model']);
+        compter.moive();
+        compter.music();
+        compter.game();
+        compter.code();
+
+        //2.创建一个按钮对象，该对象包括宽、高、背景颜色和点击行为
+        var button = new Object();
+        button.wide = "25px";
+        button.height = '50px';
+        button.backgroundcolor = 'pink';
+        button.click = function () {
+            console.log('噔噔噔');
+        }
+        console.log(button.wide);
+        console.log(button.height);
+        console.log(button['backgroundcolor']);
+        button.click();
+
+        //3.创建一个车的对象，该对象要有颜色、重量、牌子，可以载人，拉货，耕田。
+        var car = {
+            weight: '1t',
+            color: 'pink',
+            brand: 'BYD',
+            manned: function () {
+                console.log('嘟嘟嘟');
+            },
+            pull: function () {
+                console.log('货拉拉');
+            },
+            Ploughing: function () {
+                console.log('嘿咻嘿咻');
+            }
+        }
+        for (var k in car) {
+            console.log(k);
+            console.log(car[k]);
+        }
+
+
+
+        //4.写一个函数，翻转任意数组
+        function fz() {
+            var sz = [];
+            for (i = arguments.length - 1; i >= 0; i--) {
+                sz[sz.length] = arguments[i];
+            }
+            return sz;
+        }
+        console.log(fz(5, 4, 3, 2, 1));
+
+        //5.写一个函数，实现对数字数组的排序（冒泡排序）
+        function mp() {
+            for (i = 0; i < arguments.length - 1; i++) {
+
+                for (j = 0; j < arguments.length - i - 1; j++) {
+                    if (arguments[j] < arguments[j + 1]) {
+                        var steam = arguments[j + 1];
+                        arguments[j + 1] = arguments[j];
+                        arguments[j] = steam;
+                    }
+                }
+            }
+
+            return arguments;
+        }
+        console.log(mp(25, 36, 45, 2, 9, 85, 77, 99));
+        //6.做一个简易计时器
+        var choose = prompt('欢迎使用简易计算器：\n1.加法运算\n2.减法运算\n3.乘法运算\n4.除法运算\n5.退出\n请输入您的选项：');
+        switch (choose) {
+            case '1':
+                var num1 = prompt('请输入第一个数：');
+                var num2 = prompt('请输入第二个数：');
+                var sum = parseInt(num1) + parseInt(num2);
+                alert('两数之和为' + sum);
+
+                break;
+            case '2':
+                var num3 = prompt('请输入减数：');
+                var num4 = prompt('请输入被减数：');
+                var sum1 = parseInt(num3) - parseInt(num4);
+                alert('两数之差为' + sum1);
+                break;
+            case '3':
+                var num5 = prompt('请输入第一个数：');
+                var num6 = prompt('请输入第二个数：');
+                var sum2 = parseInt(num5) * parseInt(num6);
+                alert('两数之积为' + sum2);
+                break;
+            case '4':
+                var num7 = prompt('请输入除数：');
+                var num8 = prompt('请输入被除数：');
+                var sum3 = parseFloat(num7) / parseFloat(num8);
+                alert('两数之商为' + sum3);
+                break;
+            case '5':
+
+                break;
+
+            default:
+                break;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

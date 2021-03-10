@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>检测</title>
+    <script>
+        function flip() {
+            if (arr instanceof Array) {
+                var fz = [];
+                for (i = arguments.length - 1; i >= 0; i--) {
+                    fz[fz.length] = arguments[i];
+                }
+                return fz;
+            } else {
+                return 'error';
+            }
+        }
+        //检测是否为数组
+        //1.使用instanxeof 运算符 它可以用来检测是否为数组
+        var arr = [];
+        var obj = {};
+        console.log(arr instanceof Array);//返回 true
+        console.log(obj instanceof Array);//返回false
+        //2.Array.isArray(参数); H5新增的方法  ie9以上才支持
+        console.log(Array.isArray(arr));
+        console.log(Array.isArray(obj));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

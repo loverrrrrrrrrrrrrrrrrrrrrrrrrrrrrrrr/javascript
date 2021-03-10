@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字</title>
+    <script>
+        function getRandomInt(min, max) {
+
+            return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+        }
+        var nnm = getRandomInt(1, 50);//只执行一次
+        console.log(nnm);
+        //后面接着循环
+        // while (true) {
+        //     var num = parseInt(prompt('猜数字游戏开始啦\n请输入一个0-10之间的数字：'));
+
+        //     if (num > nnm) {
+        //         alert('你猜大了');
+        //     } else if (num < nnm) {
+        //         alert('你猜小了');
+        //     } else {
+        //         alert('你好帅哦，猜对了');
+        //         break;
+        //     }
+        // }
+        for (i = 1; i <= 10; i++) {
+            var num = parseInt(prompt('猜数字游戏开始啦\n注意，你只有10次机会哦\n请输入一个0-50之间的数字：'));
+            if (num > nnm) {
+                alert('你猜大了');
+            } else if (num < nnm) {
+                alert('你猜小了');
+            } else {
+                alert('你好帅哦，猜对了');
+                break;
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

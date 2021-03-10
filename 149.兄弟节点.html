@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兄弟节点</title>
+</head>
+
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <script>
+        var div = document.querySelector('div');
+        // nextSibling 下一个兄弟节点  包括元素节点 和文本节点
+        console.log(div.nextSibling);
+        console.log(div.previousSibling);
+        //上下 一个元素节点  有兼容性问题
+        console.log(div.nextElementSibling);
+        var span = document.querySelector('span');
+        console.log(span.previousElementSibling);
+
+
+
+
+        //自己封装一个兼容性的函数
+        function getNextElementSibling(element) {
+            var el = element;
+            while (el = el.nextSibling) {
+                if (el.nodeType === 1) {
+                    return el;
+                }
+            }
+            return null;
+        }
+    </script>
+</body>
+
+</html>

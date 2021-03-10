@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广告</title>
+
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            var div = document.querySelector('.gg');
+            function callback() {
+                div.style.display = 'none';
+                alert('关闭啊');
+            }
+            setTimeout(callback, 5000);
+        })
+    </script>
+    <div>
+
+        <img src="images/ad.jpg" alt="" class="gg">
+    </div>
+</body>
+
+</html>

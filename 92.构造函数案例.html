@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例</title>
+    <script>
+        function Wzyy(uname, type, blood) {
+            this.name = uname;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function (fs) {
+                console.log(fs);
+            }
+        }
+        var lp = new Wzyy('廉颇', '力量型', 500);
+        console.log(lp.name);
+        console.log(lp.type);
+        console.log(lp.blood);
+        lp.attack('近战');
+
+        var hy = new Wzyy('后羿', '射手型', 100);
+        console.log(hy.name);
+        console.log(hy.blood);
+        console.log(hy.type);
+        lp.attack('远程');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

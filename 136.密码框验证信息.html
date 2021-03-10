@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密码框验证信息</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            margin: 100px auto;
+            width: 500px;
+            height: 25px;
+        }
+
+        input {
+            width: 200px;
+            height: 100%;
+        }
+
+
+        span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: #61b7ee;
+            text-align: center;
+            line-height: 15px;
+            border-radius: 50%;
+            color: white;
+        }
+
+        p {
+            display: inline-block;
+            margin-left: 5px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="password" id="psw" value="">
+        <span>i</span>
+        <p class="message">请输入6-16位密码</p>
+    </div>
+
+    <script>
+        var psw = document.getElementById('psw');
+        var message = document.querySelector('.message');
+        var span = document.querySelector('span');
+        psw.onblur = function () {
+            if (psw.value.length < 6 || psw.value.length > 16) {
+                span.innerHTML = '✘';
+                span.style.backgroundColor = 'red';
+                message.innerHTML = '密码输入错误，请输入6~16位密码';
+                message.style.color = 'red';
+            } else {
+                span.innerHTML = '✔';
+                span.style.backgroundColor = 'green';
+                message.innerHTML = '格式正确';
+                message.style.color = '#999';
+
+            }
+        }
+    </script>
+</body>
+
+</html>

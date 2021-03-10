@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方法</title>
+    <script>
+        console.log(Math.abs(1));//1
+        console.log(Math.abs(-1));//1
+        console.log(Math.abs('1'));//1
+        console.log(Math.abs('pink'));//NaN
+        //向下取整  按照最小的来
+        console.log(Math.floor(1.1));//1
+        console.log(Math.floor(1.9));//1
+        //向上取整 按照最大的来
+        console.log(Math.ceil(1.1));//2
+        console.log(Math.ceil(1.9));//2
+        //四舍五入
+        console.log(Math.round(1.1));//1
+        console.log(Math.round(1.5));//2
+        console.log(Math.round(1.9));//2
+        console.log(Math.random(1));
+        function getRandomInt(min, max) {
+
+            return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+        }
+        // getRandomInt(1, 50)
+        console.log(getRandomInt(0, 4));
+        //5.随机点名
+        var arr = ['张三', '张思', '张武', '张柳', '张琪', 'pink'];
+        console.log(arr[getRandomInt(0, arr.length - 1)]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更改类名</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: brown;
+        }
+
+        .change {
+            height: 500px;
+            width: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>文本</div>
+    <script>
+        var div = document.querySelector('div');
+        div.onclick = function () {
+            this.className = 'change';//会直接覆盖原来的类名
+            this.className = 'div change';
+        }
+    </script>
+</body>
+
+</html>

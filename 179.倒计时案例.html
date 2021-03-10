@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒计时</title>
+    <style>
+        div {
+            margin: 200px;
+        }
+
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div>
+    <script>
+        var hour = document.querySelector('.hour');
+        var minute = document.querySelector('.minute');
+        var second = document.querySelector('.second');
+        var inputTime = +new Date('2021-3-11 19:20');//返回的是用户输入时间总的毫秒数
+
+        countDown();//先调用一次 ，防止第一次调用有空白
+        setInterval(countDown, 1000);
+        function countDown() {
+            var nowTime = +new Date();//返回的是当前时间总的毫秒数
+
+            var times = (inputTime - nowTime) / 1000;//返回的是输入时间减去当前时间的总的秒数
+            var h = parseInt(times / 60 / 60 % 24);
+            var m = parseInt(times / 60 % 60);
+            var s = parseInt(times % 60);
+            h = h < 10 ? '0' + h : h;
+            m = m < 10 ? '0' + m : m;
+            s = s < 10 ? '0' + s : s;
+            hour.innerHTML = h;
+            minute.innerHTML = m;
+            second.innerHTML = s;
+
+
+        }
+    </script>
+</body>
+
+</html>

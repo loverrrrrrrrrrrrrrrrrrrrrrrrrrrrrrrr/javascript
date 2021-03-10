@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作元素之修改表单元素</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <button>按钮</button>
+    <input type="text" value="输入内容">
+    <script>
+        var btn = document.querySelector('button');
+        var input = document.querySelector('input');
+        btn.onclick = function () {
+            // input.innerHTML = '被点击了';这个是 普通盒子 比如div 标签里面的内容
+            //表单里面的值是通过value来修改的
+            input.value = '被点击了';
+            //如果想要某个表单被禁用 不能再点击 用disabled  我们用这个来禁用按钮
+            // btn.disabled = true;
+            this.disabled = true;
+            // this 指向的是事件函数的调用者  btn
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式属性修改</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        var flag = 0;
+        div.onclick = function () {
+            if (flag == 0) {
+                //里面的命名采用驼峰命名法
+                //JS修改style 样式操作，产生的是行内样式 CSS 权重比较高
+                this.style.backgroundColor = 'red';
+                flag = 1;
+            }
+            else {
+                this.style.backgroundColor = 'pink';
+                flag = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

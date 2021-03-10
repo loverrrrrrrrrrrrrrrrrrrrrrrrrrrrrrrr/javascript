@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作方法</title>
+    <script>
+        //字符串的操作方法
+        //1.concat('字符串1','字符串2'......)
+        var str = 'red';
+        console.log(str.concat('pink'));
+
+        //2.substr('截取的起始位置','截取几个字符');
+        var str1 = '改革春风吹满地';
+        console.log(str1.substr(2, 2));//第一个2是索引号的2  第二个2 是取2个字符
+
+        //替换字符  replace('被替换的字符','替换的字符')
+        var str2 = 'andyandy';
+        console.log(str2.replace('a', 'b'));//只会替换第一个
+        //有一个字符串'abcoefoxyozzopp'要求把里面所有的o替换为*
+        var str3 = 'abcoefoxyozzopp';
+        while (str3.indexOf('o') !== -1) {
+            str3 = str3.replace('o', '*');
+        }
+        console.log(str3);
+        //2.字符转换为数组 splite('分隔符') 前面我们学过 join 把数组转换为字符串
+        var str4 = 'red,pink,green';
+        console.log(str4.split(','));//这里就变成了数组  ['red','pink','green']
+        var str5 = 'red&pink&green';
+        console.log(str5.split('&'));
+        //3.toUpperCase() 方法将调用该方法的字符串转为大写形式并返回（如果调用该方法的值不是字符串类型会被强制转换）。
+        var str5 = 'abcdefghijklmnopqrstuvwxyz';
+        console.log(str5.toLocaleUpperCase());
+        //4.toLowerCase() 会将调用该方法的字符串值转为小写形式，并返回。
+        var str6 = str5.toLocaleUpperCase();
+        console.log(str6.toLocaleLowerCase());
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

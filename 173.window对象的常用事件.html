@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // //window.onload 是页面加载事件，当文档内容完全家在完成就会触发该事件（包括图像、脚本文件、CSS文件等),就调用的处理函数
+        // //这种传统方式只能写一次 多个就以最后一个为准
+        // window.onload = function () {
+        //     var btn = document.querySelector('button');
+        //     btn.addEventListener('click', function () {
+        //         alert('点击我');
+        //     })
+        // }
+        window.addEventListener('load', function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                alert('点击我');
+            })
+        })
+        window.addEventListener('load', function () {
+            alert('22');
+        })
+        document.addEventListener('DOMContentLoaded', function () {
+            // 这个事件触发时，仅当DOM加载完成，不包括样式表，图片，flash等等
+            //所以这个加载更快 适合在拥有大量图片的状况下使用
+            alert('33')
+        })
+    </script>
+</head>
+
+<body>
+
+
+    <button>点击</button>
+</body>
+
+</html>

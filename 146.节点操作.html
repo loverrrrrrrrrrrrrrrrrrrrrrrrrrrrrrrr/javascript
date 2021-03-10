@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点操作</title>
+</head>
+
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+    <div class="box">
+        <span class="erweima">x</span>
+    </div>
+    <script>
+        //节点描述
+        //一般的 节点至少拥有nodeType(节点类型)、nodeName(节点名字)、和nodeValue(节点值)这三个基本元素
+        //元素节点 nodeType  为1
+        //属性节点 nodeType  为2
+        //文本节点 nodeType  为3(文本节点包括文字空格换行等)
+        //我们在实际开发中，节点操作主要操作的是元素节点
+        //
+        //父级节点  parentNode
+
+        // 如果我们需要查找到erweima这一元素
+        // var box = document.querySelector('box');
+        // box.querySelector('erweima');
+        var erweima = document.querySelector('.erweima');
+        console.log(erweima.parentNode);
+        var div = document.querySelector('.box');
+        console.log(div.childNodes);//        console.log(div.children);//返回属性节点 和元素节点
+
+        console.log(div.children);//返回属性节点 和元素节点
+    //但是我们如果用父级节点的方法就会很简单
+    </script>
+</body>
+
+</html>

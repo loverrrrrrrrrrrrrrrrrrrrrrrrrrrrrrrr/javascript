@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘事件</title>
+</head>
+
+<body>
+    <!-- onkeyup ---某个键盘按键被松开时触发
+        onkeydown---某个键盘按键被按下时触发
+        onkeypress--某个键盘按键被按下时触发----------但是他不支持功能键 比如ctrl shift箭头等 -->
+    <script>
+        // onkeyup-- - 某个键盘按键被松开时触发
+        document.addEventListener('keyup', function () {
+            console.log('我弹起了');
+        })
+
+        // onkeydown-- - 某个键盘按键被按下时触发
+        document.addEventListener('keydown', function () {
+            console.log('我按下了');
+        })
+        // onkeypress--某个键盘按键被按下时触发----------但是他不支持功能键 比如ctrl shift箭头等
+        document.addEventListener('keypress', function () {
+            console.log('我按下了');
+        })
+
+        //执行顺序  keydown-->kerpress-->keyup
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>知否知否，应是绿肥红瘦1</li>
+        <li>知否知否，应是绿肥红瘦2</li>
+        <li>知否知否，应是绿肥红瘦3</li>
+        <li>知否知否，应是绿肥红瘦4</li>
+        <li>知否知否，应是绿肥红瘦5</li>
+    </ul>
+    <ol id="ol">
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    </ol>
+    <script>
+        //1.返回的是 获取过来元素对象的集合 以伪数组的形式存储
+        var li = document.getElementsByTagName('li');
+        console.log(li);
+        console.log(li[0]);
+        //2.我们想要一次打印里面的元素对象我们可以采用遍历的方式
+        for (i = 0; i < li.length; i++) {
+            console.log(li[i]);
+        }
+        //3.如果页面中只有一个li返回的也是伪数组的形式
+        //4.如果页面中没有这个元素  返回的就是空的伪数组的形式
+        // var ol = document.getElementsByTagName('ol');  
+        // console.log(ol[0].getElementsByTagName('li'));这里必须是具体的父级元素
+        // console.log(ol);
+        var ll = document.getElementById('ol');
+        console.log(ll.getElementsByTagName('li'));
+    </script>
+</body>
+
+</html>
